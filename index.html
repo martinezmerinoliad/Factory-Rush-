@@ -1,0 +1,13 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Factory Rush</title><link rel="stylesheet" href="style.css"></head><body>
+<main>
+<section id="start" class="screen hero"><div class="tag">🏭 SIMULACIÓN INDUSTRIAL</div><h1>FACTORY <em>RUSH</em></h1><p>Convertite en Production Manager: organizá pedidos, asigná máquinas y reaccioná a imprevistos.</p><div class="cards"><b>📦 Pedidos variables</b><b>⚙️ 9 recursos</b><b>🚨 Alertas sorpresa</b><b>🏆 Puntaje final</b></div><button id="play">INICIAR TURNO →</button><small>Simulación educativa: tiempos, costos y eventos son ficticios.</small></section>
+<section id="game" class="screen hide">
+<header><div><span>FACTORY RUSH</span><h2>Centro de control</h2></div><div class="stats"><b>⏱️ <i id="clock">04:00</i></b><b>💰 <i id="cost">$0</i></b><b>⭐ <i id="score">0</i></b><b>📦 <i id="done">0/3</i></b></div></header>
+<div class="layout"><aside><h3>📦 Pedidos</h3><div id="orders"></div><p class="tip">Elegí un pedido y después una máquina compatible que esté libre.</p></aside>
+<section class="plant"><div class="selected" id="selected">Ningún pedido seleccionado</div>
+<div id="stages"></div><div class="dispatch">🏁 DESPACHO</div></section>
+<aside><h3>📡 Actividad</h3><div id="log"></div><button id="pause" class="soft">⏸ Pausar</button></aside></div></section>
+<section id="result" class="screen hero hide"><div class="trophy">🏆</div><div class="tag">REPORTE DE PRODUCCIÓN</div><h2 id="rank">Turno terminado</h2><div class="bigscore"><small>PUNTAJE FINAL</small><strong id="finalScore">0</strong></div><div class="cards"><b id="rDone">📦 0/3</b><b id="rTime">⏱️ 0/3</b><b id="rCost">💰 $0</b><b id="rDec">🚨 0/0</b></div><p id="feedback"></p><button id="again">🔄 NUEVA PARTIDA</button><small>La próxima partida genera nuevos pedidos e imprevistos.</small></section>
+</main>
+<div id="overlay" class="overlay hide"><div class="alert"><div class="siren">🚨</div><div class="red">ALERTA DE PRODUCCIÓN</div><h2 id="alertTitle"></h2><p id="alertText"></p><div class="timer">DECIDÍ RÁPIDO <b id="timer">15</b></div><div id="choices" class="choices"></div><small>No siempre existe una opción perfecta: cada decisión tiene consecuencias.</small></div></div>
+<script src="game.js"></script></body></html>
